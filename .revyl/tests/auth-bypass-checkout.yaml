@@ -1,0 +1,19 @@
+# Revyl Test Definition
+
+test:
+    metadata:
+        name: auth-bypass-checkout
+        platform: ios
+    build:
+        name: bug-bazaar-ios-preview
+    env_vars:
+        - REVYL_AUTH_BYPASS_ENABLED
+        - REVYL_AUTH_BYPASS_TOKEN
+    variables:
+        auth_bypass_token: revyl-demo-token
+    blocks:
+        - type: manual
+          step_type: navigate
+          step_description: bug-bazaar://revyl-auth?token={{auth_bypass_token}}&role=collector&redirect=%2Fcheckout
+        - type: validation
+          step_description: The checkout screen is visible and the account is signed in as Revyl Test Collector

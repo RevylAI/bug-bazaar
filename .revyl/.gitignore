@@ -1,0 +1,20 @@
+# Revyl CLI local files
+# Keep credentials out of version control
+credentials.json
+config.yaml
+
+# Local overrides (optional)
+config.local.yaml
+
+# Device session cache (local machine state)
+device-sessions.json
+device-session.json
+device.json
+
+# Generated per-machine runtime files
+remote.json
+shell-init.sh
+.services.pid
+
+# MCP session artifacts (screenshots, etc.)
+mcp/

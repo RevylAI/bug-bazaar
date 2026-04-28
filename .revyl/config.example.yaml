@@ -1,0 +1,20 @@
+# Revyl CLI Configuration
+# Copy this file to .revyl/config.yaml or run `revyl init` in this repo.
+
+project:
+  name: bug-bazaar
+
+build:
+  system: Expo
+  command: npx --yes eas-cli build --platform ios --profile development-simulator --local --output build/dev-ios.tar.gz
+  output: build/dev-ios.tar.gz
+
+hotreload:
+  default: expo
+  providers:
+    expo:
+      port: 8081
+      app_scheme: bug-bazaar
+      platform_keys:
+        ios: ios-dev
+        android: android-dev
