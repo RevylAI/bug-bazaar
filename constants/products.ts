@@ -3,13 +3,13 @@ export type Product = {
   name: string;
   price: number;
   emoji: string;
-  badge?: 'RARE' | 'NEW' | 'HOT';
+  badge?: 'COMMON' | 'RARE' | 'NEW' | 'HOT';
   category: string;
   description: string;
 };
 
 export const allProducts: Product[] = [
-  { id: 1, name: 'Hercules Beetle', price: 45.00, emoji: '🪲', badge: 'RARE', category: 'Beetles', description: 'The mightiest of all beetles. Known for its incredible horn and strength. A true collector\'s specimen.' },
+  { id: 1, name: 'Hercules Beetle', price: 45.00, emoji: '🪲', badge: 'COMMON', category: 'Beetles', description: 'The mightiest of all beetles. Known for its incredible horn and strength. A true collector\'s specimen.' },
   { id: 2, name: 'Blue Morpho', price: 28.50, emoji: '🦋', category: 'Butterflies', description: 'Iridescent blue wings that shimmer in the light. One of the most beautiful butterflies in the world.' },
   { id: 3, name: 'Orchid Mantis', price: 62.00, emoji: '🦗', category: 'Crawlers', description: 'Masters of disguise. This stunning mantis mimics orchid petals to lure prey. Premium specimen.' },
   { id: 4, name: 'Gold Tortoise', price: 18.00, emoji: '🐞', badge: 'NEW', category: 'Beetles', description: 'A tiny golden jewel. This beetle can change color from gold to reddish-brown. Freshly collected.' },

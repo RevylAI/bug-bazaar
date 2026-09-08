@@ -13,6 +13,8 @@ import { allProducts } from '../../constants/products';
 import { useCart } from '../../context/CartContext';
 import Emoji from '../../components/Emoji';
 
+const CURRENCY_CODE = 'USD';
+
 export default function ProductDetailScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -61,7 +63,7 @@ export default function ProductDetailScreen() {
             <View
               style={[
                 styles.badge,
-                product.badge === 'RARE'
+                product.badge === 'RARE' || product.badge === 'COMMON'
                   ? styles.badgeRare
                   : product.badge === 'NEW'
                   ? styles.badgeNew
@@ -83,7 +85,7 @@ export default function ProductDetailScreen() {
 
         {/* Details */}
         <View style={styles.detailsSection}>
-          <Text style={styles.sectionTitle}>SPECIMEN DETAILS</Text>
+          <Text style={styles.sectionTitle}>DETAILS</Text>
           <View style={styles.detailRow}>
             <Text style={styles.detailLabel}>Category</Text>
             <Text style={styles.detailValue}>{product.category}</Text>
@@ -130,7 +132,9 @@ export default function ProductDetailScreen() {
       <View style={styles.footer}>
         <View style={styles.footerPrice}>
           <Text style={styles.footerPriceLabel}>Price</Text>
-          <Text style={styles.footerPriceValue}>${product.price.toFixed(2)}</Text>
+          <Text style={styles.footerPriceValue}>
+            ${product.price.toFixed(2)} {CURRENCY_CODE}
+          </Text>
         </View>
         <TouchableOpacity
           style={styles.addToCartBtn}
