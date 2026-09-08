@@ -71,7 +71,7 @@ export default function ProductDetailScreen() {
               <Text style={styles.badgeText}>{product.badge}</Text>
             </View>
           )}
-          <Emoji emoji={product.emoji} size={80} />
+          <Text style={styles.productImageText}>testing 123</Text>
         </View>
 
         {/* Product Info */}
@@ -218,8 +218,10 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.body,
     color: Colors.inkBlack,
   },
-  productEmoji: {
-    fontSize: 80,
+  productImageText: {
+    fontFamily: Fonts.display,
+    fontSize: 24,
+    color: Colors.inkBlack,
   },
   infoSection: {
     padding: Spacing.m,
