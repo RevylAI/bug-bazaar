@@ -71,7 +71,7 @@ export default function ProductDetailScreen() {
               <Text style={styles.badgeText}>{product.badge}</Text>
             </View>
           )}
-          <Emoji emoji={product.emoji} size={80} />
+          <Text style={styles.productImageText}>do this</Text>
         </View>
 
         {/* Product Info */}
@@ -94,7 +94,7 @@ export default function ProductDetailScreen() {
           </View>
           <View style={styles.detailRow}>
             <Text style={styles.detailLabel}>Condition</Text>
-            <Text style={styles.detailValue}>Preserved</Text>
+            <Text style={styles.detailValue}>and that</Text>
           </View>
           <View style={styles.detailRow}>
             <Text style={styles.detailLabel}>Origin</Text>
@@ -218,8 +218,10 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.body,
     color: Colors.inkBlack,
   },
-  productEmoji: {
-    fontSize: 80,
+  productImageText: {
+    fontFamily: Fonts.display,
+    fontSize: 24,
+    color: Colors.inkBlack,
   },
   infoSection: {
     padding: Spacing.m,
