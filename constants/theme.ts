@@ -2,6 +2,7 @@ import { Platform } from 'react-native';
 
 export const Colors = {
   stickerGreen: 'blue',
+  heroPurple: '#8B5CF6',
   mangoOrange: 'green',
   mangoYellow: '#FFD500',
   inkBlack: '#080808',
