@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     padding: Spacing.m,
   },
   stickerCard: {
-    backgroundColor: Colors.mangoOrange,
+    backgroundColor: Colors.heroGreen,
     borderRadius: 24,
     borderTopLeftRadius: 20,
     borderBottomRightRadius: 28,
